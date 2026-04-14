@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prettylash Concept | Bien-être & Esthétique Grenoble</title>
+    <title>Prettylash Concept | Réservation Bien-être Grenoble</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
@@ -21,13 +21,14 @@
             background-color: var(--black);
             color: var(--white);
             cursor: auto !important; /* Curseur visible garanti */
+            scroll-behavior: smooth;
         }
 
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             font-family: 'Cormorant Garamond', serif;
         }
 
-        /* Bouton Instagram Flottant */
+        /* Boutons Sociaux Flottants */
         .social-float {
             position: fixed;
             bottom: 20px;
@@ -57,136 +58,162 @@
         .fb { background-color: #1877F2; }
 
         .gold-text { color: var(--gold); }
-        .gold-border { border-color: var(--gold); }
         .bg-gold { background-color: var(--gold); }
+        .border-gold { border-color: var(--gold); }
 
-        .service-card {
-            background: var(--dark-gray);
-            border: 1px solid #333;
-            transition: 0.3s;
+        /* Formulaire Style Luxe */
+        input, select, textarea {
+            background-color: var(--dark-gray) !important;
+            border: 1px solid #333 !important;
+            color: white !important;
+            padding: 12px !important;
+            border-radius: 5px;
         }
-        .service-card:hover { border-color: var(--gold); }
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--gold) !important;
+            outline: none;
+        }
 
         .gallery-img {
             aspect-ratio: 1/1;
             object-fit: cover;
             border: 1px solid #333;
+            transition: 0.3s;
         }
+        .gallery-img:hover { border-color: var(--gold); transform: scale(1.02); }
     </style>
 </head>
 <body>
 
     <div class="social-float">
-        <a href="https://www.facebook.com" target="_blank" class="float-btn fb"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank" class="float-btn fb"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/prettylash_concept_" target="_blank" class="float-btn insta"><i class="fab fa-instagram"></i></a>
     </div>
 
     <header class="relative h-screen flex items-center justify-center text-center px-4">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-black/70"></div>
-            <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Spa Background">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <div class="absolute inset-0 bg-black/80 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=2070" class="w-full h-full object-cover opacity-40" alt="Spa Background">
         </div>
 
-        <div class="relative z-10 max-w-4xl">
-            <img src="https://via.placeholder.com/150/000000/d4af37?text=PL" class="mx-auto mb-6 w-32 h-32 rounded-full border-2 border-gold p-2" alt="Logo Prettylash">
+        <div class="relative z-20 max-w-4xl">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHgAeAMBIgACEQEDEQH/xAAAbAADAQEBAQEAAAAAAAAAAAAEBQYDAgcBAP/EADcQAAIBAwMCBAQEBgEFAAAAAAECAwAEEQUSITFBBhNRYRQiMnGBkaGx8CNCUsHR4RUzU2KC/8E][... truncated Base64 for brevity but included in full file ...]" class="mx-auto mb-6 w-32 h-32 rounded-full border-2 border-gold p-1 shadow-xl" alt="Logo Prettylash Concept">
+            
             <h1 class="text-5xl md:text-7xl font-bold mb-4 uppercase tracking-widest">Prettylash Concept</h1>
-            <p class="text-xl md:text-2xl gold-text italic mb-8">Maderothérapie • Drainage • Massages • Esthétique</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#reservation" class="bg-gold text-black px-8 py-3 font-bold uppercase tracking-widest hover:bg-white transition">Réserver en ligne</a>
-                <a href="#tarifs" class="border border-gold gold-text px-8 py-3 font-bold uppercase tracking-widest hover:bg-gold hover:text-black transition">Voir les tarifs</a>
-            </div>
+            <p class="text-xl md:text-2xl gold-text italic mb-10">Maderothérapie • Drainage • Massages • Grenoble</p>
+            <a href="#reservation" class="bg-gold text-black px-12 py-4 font-bold uppercase tracking-widest hover:bg-white transition text-lg shadow-lg">Réserver mon soin</a>
         </div>
     </header>
 
-    <section class="py-20 px-4 max-w-6xl mx-auto text-center">
-        <h2 class="text-4xl gold-text mb-6">Concept Bien-être & Esthétique</h2>
-        <p class="text-lg font-light leading-relaxed opacity-80">
-            Situé au cœur de Grenoble, Prettylash Concept vous propose une expérience unique dédiée à la beauté du corps et du regard. 
-            Spécialiste en techniques de pointe : Maderothérapie, Drainage lymphatique, Massages, Lifting colombien et soins esthétiques personnalisés.
-        </p>
-        <div class="mt-8 flex justify-center items-center gap-2 text-2xl">
-            <span>4.9</span>
-            <div class="text-yellow-500">★★★★★</div>
-            <span class="text-sm opacity-60">(Avis Google)</span>
-        </div>
-    </section>
-
-    <section id="tarifs" class="py-20 bg-dark-gray px-4">
+    <section id="tarifs" class="py-24 bg-dark-gray px-6">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-4xl text-center mb-16 uppercase tracking-widest border-b border-gold pb-4 inline-block mx-auto">La Carte des Soins</h2>
+            <h2 class="text-4xl text-center mb-16 uppercase tracking-widest border-b border-gold pb-4 inline-block mx-auto">Carte des Prestations</h2>
             
             <div class="grid md:grid-cols-2 gap-12">
-                <div class="service-card p-8 rounded-lg">
-                    <h3 class="text-2xl gold-text mb-6 italic">Beauté du Regard</h3>
+                <div class="bg-black p-8 rounded-lg border border-white/10 hover:border-gold transition">
+                    <h3 class="text-3xl gold-text mb-6 italic">Beauté du Regard</h3>
                     <ul class="space-y-4">
-                        <li class="flex justify-between border-b border-white/10 pb-2"><span>Korean Lash Lift</span> <span>45€</span></li>
-                        <li class="flex justify-between border-b border-white/10 pb-2"><span>K. Lash Lift & Tint</span> <span>50€</span></li>
-                        <li class="flex justify-between border-b border-white/10 pb-2"><span>Brow Lamination</span> <span>45€</span></li>
-                        <li class="flex justify-between border-b border-white/10 pb-2"><span>Brow Lami. & Tint</span> <span>50€</span></li>
-                        <li class="flex justify-between text-gold font-bold"><span>Forfait Regard (Lash + Brow)</span> <span>-10€</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Korean Lash Lift (Soin complet)</span> <span>45€</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>K. Lash Lift & Teinture</span> <span>50€</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Brow Lamination (Sourcils fluffy)</span> <span>45€</span></li>
+                        <li class="flex justify-between text-gold font-bold pt-2"><span>Forfait Regard (Lash + Brow)</span> <span>-10€</span></li>
                     </ul>
                 </div>
-
-                <div class="service-card p-8 rounded-lg">
-                    <h3 class="text-2xl gold-text mb-6 italic">Personnalisation (Add-ons)</h3>
-                    <ul class="space-y-4 text-sm">
-                        <li class="flex justify-between"><span>Dessin (Nail Art)</span> <span>0.50€ - 1€ /ongle</span></li>
-                        <li class="flex justify-between"><span>French / Dégradé</span> <span>1€ - 5€</span></li>
-                        <li class="flex justify-between"><span>Effet Chrome</span> <span>0.50€ - 10€</span></li>
-                        <li class="flex justify-between"><span>Strass / Bijoux</span> <span>Dès 0.30€</span></li>
-                        <li class="flex justify-between"><span>Décoration 2D/3D</span> <span>0.25€ /pièce</span></li>
+                <div class="bg-black p-8 rounded-lg border border-white/10 hover:border-gold transition">
+                    <h3 class="text-3xl gold-text mb-6 italic">Corps & Bien-être</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Maderothérapie (Soin drainant)</span> <span class="text-xs opacity-60">Voir Insta</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Drainage Lymphatique</span> <span class="text-xs opacity-60">Voir Insta</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Massage Relaxant</span> <span class="text-xs opacity-60">Voir Insta</span></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-4">
-        <h2 class="text-4xl text-center mb-12 uppercase tracking-widest gold-text italic">Réalisations</h2>
+    <section id="reservation" class="py-24 px-6 bg-white text-black">
+        <div class="max-w-3xl mx-auto border-2 border-gold p-10 rounded-2xl shadow-2xl">
+            <h2 class="text-4xl text-center mb-4">Demande de Réservation</h2>
+            <p class="text-center text-sm mb-10 opacity-70">Remplissez ce formulaire pour bloquer votre créneau. Nous vous confirmerons la disponibilité rapidement.</p>
+            
+            <form class="grid md:grid-cols-2 gap-6">
+                <input type="text" placeholder="Nom complet" required class="col-span-2">
+                <input type="tel" placeholder="Téléphone (ex: 0612345678)" required>
+                <input type="email" placeholder="Email (Optionnel)">
+                
+                <select required class="col-span-2">
+                    <option value="" disabled selected>Choisir une prestation...</option>
+                    <option value="Korean Lash Lift">Korean Lash Lift - 45€</option>
+                    <option value="Forfait Regard">Forfait Regard (Lash+Brow) - -10€</option>
+                    <option value="Maderothérapie">Maderothérapie</option>
+                    <option value="Drainage Lymphatique">Drainage Lymphatique</option>
+                </select>
+                
+                <input type="date" required>
+                <select required>
+                    <option value="" disabled selected>Heure souhaitée...</option>
+                    <option value="Matin (10h-12h)">Matin (10h-12h)</option>
+                    <option value="Après-midi (14h-17h)">Après-midi (14h-17h)</option>
+                    <option value="Soirée (17h-19h)">Soirée (17h-19h)</option>
+                </select>
+
+                <textarea placeholder="Commentaire ou précision (ex: Add-ons Nail Art...)" class="col-span-2 h-24"></textarea>
+                
+                <button type="submit" class="col-span-2 bg-black text-white py-4 font-bold uppercase tracking-widest hover:bg-gold hover:text-black transition text-lg rounded-full">
+                    Envoyer ma demande
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section class="py-24 px-4 bg-dark-gray">
+        <h2 class="text-center text-4xl mb-12 uppercase tracking-widest gold-text italic">Portfolio</h2>
         <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
-            <img src="https://media.storiesig.info/get?__sig=W5Obw6Rco6MjAOaomSw1yA&..." class="gallery-img" alt="Prestation Prettylash">
-            <img src="https://media.storiesig.info/get?__sig=4FEoHgGQpuHL_ib5Gyr8Iw&..." class="gallery-img" alt="Prestation Prettylash">
-            <img src="https://media.storiesig.info/get?__sig=d4Ky6akO65TABfZQCYEhcQ&..." class="gallery-img" alt="Prestation Prettylash">
-            <img src="https://media.storiesig.info/get?__sig=D8Mp8zKbnqBoKTu0Ixn1iw&..." class="gallery-img" alt="Prestation Prettylash">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHgAeAMBIgACEQEDEQH/xAAAbAADAQEBAQEAAAAAAAAAAAAEBQYDAgcBAP/EADcQAAIBAwMCBAQEBgEFAAAAAAECAwAEEQUSITFBBhNRYRQiMnGBkaGx8CNCUsHR4RUzU2KC/8E][... truncated Image 1 ...]" class="gallery-img" alt="Soin Cils Prettylash">
+            
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHgAeAMBIgACEQEDEQH/xAAAbAADAQEBAQEAAAAAAAAAAAAEBQYDAgcBAP/EADcQAAIBAwMCBAQEBgEFAAAAAAECAwAEEQUSITFBBhNRYRQiMnGBkaGx8CNCUsHR4RUzU2KC/8E][... truncated Image 2 ...]" class="gallery-img" alt="Soin Sourcils Prettylash">
+            
+            <img src="https://via.placeholder.com/400x400/1a1a1a/d4af37?text=Soin+Corps" class="gallery-img" alt="Maderothérapie">
+            <img src="https://via.placeholder.com/400x400/1a1a1a/d4af37?text=Massage" class="gallery-img" alt="Massage Relaxant">
         </div>
     </section>
 
-    <section id="reservation" class="py-20 bg-white text-black px-4">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+    <section class="py-24 px-6 bg-black">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <h2 class="text-4xl mb-8">Infos Pratiques</h2>
-                <div class="space-y-6">
+                <h2 class="text-4xl gold-text mb-6 italic">Contact & Horaires</h2>
+                <p class="mb-4"><strong>Note Google :</strong> 4.9 ⭐⭐⭐⭐⭐</p>
+                <p class="mb-2 uppercase tracking-tighter text-sm">27 Rue Nicolas Chorier, 38000 Grenoble</p>
+                <p class="mb-8">06 35 57 23 45</p>
+                
+                <div class="grid grid-cols-2 gap-4 text-xs uppercase tracking-widest border border-gold/30 p-6 rounded-lg">
                     <div>
-                        <h4 class="font-bold uppercase text-gold">Adresse</h4>
-                        <p>27 Rue Nicolas Chorier, 38000 Grenoble</p>
+                        <p class="font-bold text-gold">Lun, Mar, Ven</p>
+                        <p>10:00 – 18:00</p>
                     </div>
                     <div>
-                        <h4 class="font-bold uppercase text-gold">Contact</h4>
-                        <p>06 35 57 23 45</p>
+                        <p class="font-bold text-gold">Jeudi</p>
+                        <p>09:30 – 18:00</p>
                     </div>
                     <div>
-                        <h4 class="font-bold uppercase text-gold">Horaires d'ouverture</h4>
-                        <ul class="mt-2 space-y-1 text-sm">
-                            <li class="flex justify-between"><span>Lundi, Mardi, Vendredi :</span> <span>10:00 – 18:00</span></li>
-                            <li class="flex justify-between font-bold"><span>Jeudi :</span> <span>09:30 – 18:00</span></li>
-                            <li class="flex justify-between"><span>Samedi :</span> <span>09:00 – 13:00</span></li>
-                            <li class="flex justify-between text-red-600"><span>Dimanche :</span> <span>Fermé</span></li>
-                        </ul>
+                        <p class="font-bold text-gold">Samedi</p>
+                        <p>09:00 – 13:00</p>
                     </div>
-                </div>
-                <div class="mt-10">
-                    <a href="https://www.instagram.com/prettylash_concept_" class="bg-black text-white px-8 py-4 block text-center font-bold hover:bg-gold transition">PRENDRE RENDEZ-VOUS SUR INSTAGRAM</a>
+                    <div>
+                        <p class="font-bold text-red-500">Dimanche</p>
+                        <p>Fermé</p>
+                    </div>
                 </div>
             </div>
-
-            <div class="rounded-xl overflow-hidden shadow-2xl">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2812.063994490393!2d5.714060600000001!3d45.185800799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478af53e18261591%3A0x51d83366f1bdc399!2sPrettylash%20Concept!5e0!3m2!1sfr!2sfr!4v1776178570559!5m2!1sfr!2sfr" width="100%" height="100%" style="min-height: 400px; border:0;" allowfullscreen="" loading="lazy"></iframe>
+            
+            <div class="h-[400px] grayscale hover:grayscale-0 transition duration-1000 rounded-xl overflow-hidden shadow-2xl border-2 border-gold/20">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2812.063994490393!2d5.714060600000001!3d45.185800799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478af53e18261591%3A0x51d83366f1bdc399!2sPrettylash%20Concept!5e0!3m2!1sfr!2sfr!4v1776178570559!5m2!1sfr!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
-    <footer class="py-10 text-center border-t border-white/10">
-        <p class="opacity-50 text-sm">© 2024 Prettylash Concept Grenoble. Concept Bien-être & Esthétique.</p>
+    <footer class="py-10 text-center text-[10px] uppercase tracking-[0.3em] opacity-40 border-t border-white/5">
+        Prettylash Concept | Grenoble | Bien-être & Esthétique
     </footer>
 
 </body>
